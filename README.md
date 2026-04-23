@@ -37,8 +37,47 @@ Relationships:
 Both of the original spreadsheets (Sales_Dump & Product_Supplier_Master) contain several different data quality issues:
 
 ### Issues in Sales_Dump:
-...
+1. Missing values
+Several important fields are blank in many rows, especially:
 
+customer_email
+discount
+tax
+line_total
+size_or_weight
+return_flag
+
+2. Inconsistent formatting
+The same type of information is entered in different ways:
+
+Dates use different formats
+Payment methods appear as VISA, visa, Debit, MC, Mastercard
+Country values appear as US, USA, CA, Canada
+Phone numbers are written in different styles
+
+3. Numbers stored as text
+Some columns that should contain only numbers include words or symbols:
+
+Prices like USD 18.99
+Discounts like 10% or promo5
+Tax values like 13%, 0.13, HST 13%
+Quantity values like 2 units
+
+4. Unreliable sales totals
+Many line_total values are missing, and some totals do not match the quantity, unit price, discount, and tax.
+
+5. Mixed information in one field
+Some columns contain more than one type of information:
+
+customer_info mixes customer details together
+notes contains extra comments in free text
+
+6. Inconsistent units
+Size and weight are recorded in different ways, such as:
+
+11"
+11 inches
+11 in
 ### Issues in Product_Supplier_Master:
 ...
 
