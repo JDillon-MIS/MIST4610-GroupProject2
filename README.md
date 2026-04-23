@@ -24,13 +24,8 @@ Because the business is still growing, its records have been kept in two Excel s
 <img width="2567" height="1022" alt="image" src="https://github.com/user-attachments/assets/48939258-1d72-4b21-b01d-df1ecf82fe74" />
 
 Relationships:
-- A *manager* supervises many *employees*, and each *employee* reports to only one *manager*.
-- An *employee* handles many *orders*, and each *order* is handled by only one *employee*.
-- A *customer* can place many *orders*, and each *order* belongs to only one *customer*.
-- An *order* contains many *order_lines*, and each *order_line* belongs to just one *order*.
-- Each *order_line* references just one *product* (or one of its varients), and each *product* can appear in multiple *order_lines*.
-- A *product_variant* belongs to just one parent *product*, but a *product* can have many different *product_varients*.
-- A *vendor* can supply many *products* and a *product* can be supplied by many *vendors* through *vendor_product*.
+<img width="907" height="460" alt="image" src="https://github.com/user-attachments/assets/b2a4e5ac-b757-4c79-8e3e-23b98e7e209d" />
+
 
 ## Data Quality Assessment:
 
