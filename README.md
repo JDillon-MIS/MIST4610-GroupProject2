@@ -16,7 +16,7 @@ We're working with a small online-retail company called Northline Outfitters whi
 Because the business is still growing, its records have been kept in two Excel spreadsheets instead of a relational database. The data contained in both of these spreadsheets ("Sales_Dump" and "Product_Supplier_Master") are dirty, not normalized, and contain a variety of inconsistencies, which we have documented and adressed below.
 
 ## Conceptual Model:
-<img width="1065" height="946" alt="sqldatamodel2" src="https://github.com/user-attachments/assets/64d8b429-dfa1-43de-a22a-b476d1d6c450" />
+<img width="1065" height="920" alt="dm2" src="https://github.com/user-attachments/assets/c887bebc-5038-4a0b-b2c7-b1aeeb1e2112" />
 
 
 #### Explanation of Entities & Relationships:
