@@ -79,8 +79,41 @@ Size and weight are recorded in different ways, such as:
 11 inches
 11 in
 ### Issues in Product_Supplier_Master:
-...
+1. Missing values
+Many rows are missing important product or supplier details, including:
 
+reorder_level
+pack_size
+weight
+length
+discontinued
+
+2. Duplicate and inconsistent product IDs
+Some SKUs appear more than once, often with only capitalization differences, such as:
+
+SKU-C-1002
+sku-c-1002
+
+3. Inconsistent product details
+The same SKU may be linked to different descriptions or categories.
+For example, one version may describe a product one way, while another uses a slightly different name or category.
+
+4. Inconsistent category names
+Categories are written in different ways, such as:
+
+Tech / Student
+Tech & Student
+Desk Setup / Student
+
+5. Mixed information in one field
+Some text fields include extra comments instead of just clean master data.
+For example, vendor_rep may include notes like “email missing.”
+
+6. Inconsistent units of measure
+Weight and size values are not standardized, such as:
+
+272 grams vs 272g
+0.22 kilograms vs 0.22kg
 
 ## Data Cleaning Process:
 
