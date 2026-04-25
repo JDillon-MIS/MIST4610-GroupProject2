@@ -145,19 +145,18 @@ Some category values had multiple segments separated by / or ,, and some duplica
 
 **Additional Query #1.** "What is the trend in month-to-month revenue for the US versus what it is for Canada?"
 
- insert SQL Script
+<img width="1612" height="1125" alt="image" src="https://github.com/user-attachments/assets/581f3bdd-e35a-4882-ba0d-97e879e3e6f6" />
 
 Business Justification: This helps Northline Outfitters understand whether or not thier revenue is growing and when peak seasons occur. Seperating it by country allows the company to identify whether US and Canadian markets are behaving differently.
 
-**Additional Query #2.** "
+**Additional Query #2.** "Which product categories have the highest return rates?"
 
-insert SQL Script
+<img width="2190" height="795" alt="image" src="https://github.com/user-attachments/assets/ec9a8eee-f99d-4ea2-99ed-4ceb1f2ed304" />
 
 Business Justification:
 
-**Additional Query #3.** "
+**Additional Query #3.** "Who are Northline Outfitters' highest-value customers, and how do guest and standard customers compare in spending?
 
-insert SQL Script
+<img width="1870" height="1110" alt="image" src="https://github.com/user-attachments/assets/077b1f82-4ba9-478f-81c3-02f1d2986eb0" />
 
 Business Justification: High return rates in specific categories (e.g. Apparel & Electronics) can indicate problems like sizing issues, misleading descriptions, and poor fit for its target market. Northline Outfitters can use this information to help them decide which categories should be updated with more accurate details, or perhaps dropped entirely if it's a bad fit for its target market.
-
