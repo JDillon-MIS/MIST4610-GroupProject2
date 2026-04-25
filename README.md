@@ -136,6 +136,7 @@ Some category values had multiple segments separated by / or ,, and some duplica
 
 
 **Required Query #2.** "Which employees handled the largest number of orders, and how do their results compare with other employees under the same manager?"
+<img width="1987" height="1085" alt="image" src="https://github.com/user-attachments/assets/c9d348d7-2117-41a2-bba2-78c9df9119d0" />
 
 
 **Required Query #3.** "Which vendors supply products that appear in more than one category?"
