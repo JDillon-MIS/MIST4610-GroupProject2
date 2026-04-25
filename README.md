@@ -80,7 +80,7 @@ SKUs were inconsistently capitalized across both sheets (e.g. sku-c-1002 vs SKU-
 Values included US, USA, CA, Canada, and some blanks. We normalized everything to either the US or CA. Blank rows were inferred from the order ID prefix: CORD- orders were assigned CA and UORD- orders were assigned US.
 
 **Sale dates:** <br/>
-The sale_date column had at least six different formats mixed together (e.g. 10-11-2025, Oct 17 25, October 5 25, 31/10/2025). We standardized all dates to YYYY-MM-DD format. One record had a date of May 1 2026 which is a future date and probably just a data entry error, so it was nulled out.
+The sale_date column had at least six different formats mixed together (e.g. 10-11-2025, Oct 17 25, October 5 25, 31/10/2025). We standardized all dates to YYYY-MM-DD format. One record had a date of May 1 2026 which is a future date and probably just a data entry error, so we changed it to "2025-05-01".
 
 **Customer name:** <br/>
 The raw customer_info field stored everything in one unstructured text blob using inconsistent delimiters (|, ;, /). To match our model's split name columns, we extracted the full name as everything before the first delimiter, then split it into customer_F_Name and customer_L_Name on the first space.
@@ -132,10 +132,11 @@ Some category values had multiple segments separated by / or ,, and some duplica
 
 
 **Required Query #1.** "Which products generated the highest total sales revenue, by country?"
-insert SQL Output
+<img width="1880" height="860" alt="image" src="https://github.com/user-attachments/assets/b68927bb-7331-46fd-bd15-c7fe27e88d15" />
+
 
 **Required Query #2.** "Which employees handled the largest number of orders, and how do their results compare with other employees under the same manager?"
-insert SQL Output
+
 
 **Required Query #3.** "Which vendors supply products that appear in more than one category?"
 insert SQL Output
@@ -157,5 +158,5 @@ Business Justification:
 
 insert SQL Script
 
-Business Justification:
+Business Justification: High return rates in specific categories (e.g. Apparel & Electronics) can indicate problems like sizing issues, misleading descriptions, and poor fit for its target market. Northline Outfitters can use this information to help them decide which categories should be updated with more accurate details, or perhaps dropped entirely if it's a bad fit for its target market.
 
