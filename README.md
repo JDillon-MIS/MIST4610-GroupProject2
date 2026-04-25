@@ -32,34 +32,46 @@ Because the business is still growing, its records have been kept in two Excel s
 **Both of the original spreadsheets (which are named Sales_Dump and Product_Supplier_Master) contain several data quality issues:**
 
 ### Issues in Sales_Dump:
-1. Missing values: Several important fields are blank in many rows (i.e. customer_email, discount, tax, line_total, size_or_weight, and return_flag)
+**Missing values:** <br/>
+Several important fields are blank in many rows (i.e. customer_email, discount, tax, line_total, size_or_weight, and return_flag)
 
-2. Inconsistent formatting: The same type of information is frequently entered in different ways: Some examples are dates using different formats, Payment methods appearing as VISA, visa, Debit, MC, or Mastercard, and Country values appear as US, USA, CA, Canada, and Phone numbers are written in different styles
+**Inconsistent formatting:** <br/>
+The same type of information is frequently entered in different ways: Some examples are dates using different formats, Payment methods appearing as VISA, visa, Debit, MC, or Mastercard, and Country values appear as US, USA, CA, Canada, and Phone numbers are written in different styles
 
-3. Numbers stored as text: Some columns that should contain only numbers include words or symbols: For example, there are Prices like USD 18.99, Discounts like 10% or promo5, Tax values like 13%, 0.13, or HST 13%, and Quantity values like 2 units
+**Numbers stored as text:** <br/>
+Some columns that should contain only numbers include words or symbols. For example, there are Prices like USD 18.99, Discounts like 10% or promo5, Tax values like 13%, 0.13, or HST 13%, and Quantity values like "2 units"
 
-4. Unreliable sales totals: Many line_total values are missing, and some totals do not match the quantity, unit price, discount, and tax.
+**Unreliable sales totals:** <br/>
+Many line_total values are missing, and some totals do not match the quantity, unit price, discount, and tax.
 
-5. Mixed information in one field: Some columns contain more than one type of information: For example, customer_info mixes customer details together, and notes contains extra comments in its text
+**Mixed information in one field:** <br/>
+Some columns contain more than one type of information: For example, customer_info mixes customer details together, and notes contains extra comments in its text
 
-6. Inconsistent units: Size and weight are recorded in a number of different ways (such as 11", 11 inches, and 11 in)
+**Inconsistent units:** <br/>
+Size and weight are recorded in a number of different ways (such as 11", 11 inches, and 11 in)
 
 ### Issues in Product_Supplier_Master:
-1. Missing values: Many rows are missing important product or supplier details, including reorder_level, pack_size, weight, length, and discontinued
+**Missing values:** <br/>
+Many rows are missing important product or supplier details, including reorder_level, pack_size, weight, length, and discontinued
 
-2. Duplicate and inconsistent product IDs: Some SKUs appear more than once, often with only differences in capitalization (i.e. SKU-C-1002 versus sku-c-1002)
+**Duplicate and inconsistent product IDs:** <br/>
+Some SKUs appear more than once, often with only differences in capitalization (i.e. SKU-C-1002 versus sku-c-1002)
 
-3. Inconsistent product details: The same SKU may be linked to different descriptions or categories. For example, one version may describe a product one way, while another uses a slightly different name or category
+**Inconsistent product details:** <br/>
+The same SKU may be linked to different descriptions or categories. For example, one version may describe a product one way, while another uses a slightly different name or category
 
-4. Inconsistent category names Categories are written in different ways (such as Tech / Student, Tech & Student, or Desk Setup / Student)
+**Inconsistent category names:** <br/>
+Categories are written in different ways (such as Tech / Student, Tech & Student, or Desk Setup / Student)
 
-5. Mixed information in one field: Some text fields include extra comments instead of just clean master data. For example, vendor_rep sometime includes notes like “email missing.”
+**Mixed information in one field:** <br/>
+Some text fields include extra comments instead of just clean master data. For example, vendor_rep sometime includes notes like “email missing.”
 
-6. Inconsistent units of measure: Weight and size values are not standardized, with some examples being 272 grams vs 272g and 0.22 kilograms vs 0.22kg
+**Inconsistent units of measure:** <br/>
+Weight and size values are not standardized, with some examples being 272 grams vs 272g and 0.22 kilograms vs 0.22kg
 
 ## Data Cleaning Process:
 
-***Explain how you resolved the data quality issues identified previously. Include any SQL statements used to standardize, split, convert, or update the imported data***
+****Explain how you resolved the data quality issues identified previously. Include any SQL statements used to standardize, split, convert, or update the imported data****
 
 **SKU casing:** <br/>
 SKUs were inconsistently capitalized across both sheets (e.g. sku-c-1002 vs SKU-C-1002). We standardized all SKUs to uppercase so joins between the sales and product tables would work correctly.
