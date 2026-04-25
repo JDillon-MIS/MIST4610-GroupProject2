@@ -140,7 +140,7 @@ Some category values had multiple segments separated by / or ,, and some duplica
 
 
 **Required Query #3.** "Which vendors supply products that appear in more than one category?"
-insert SQL Output
+<img width="1975" height="725" alt="image" src="https://github.com/user-attachments/assets/7961a455-fc6c-4328-8c95-065dc021ba65" />
 
 
 **Additional Query #1.** "What is the trend in month-to-month revenue for the US versus what it is for Canada?"
